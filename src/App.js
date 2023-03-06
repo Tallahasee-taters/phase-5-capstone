@@ -5,6 +5,8 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import NavBar from "./components/NavBar";
 import PostFeed from "./components/PostFeed";
+import Account from "./components/Account";
+import Friends from "./components/Friends";
 
 function App() {
   const { user, setUser } = useContext(UserContext);
@@ -46,8 +48,8 @@ function App() {
         <NavBar setUser={setUser}/>
       <Routes>
         <Route path="/home" element={<PostFeed videos={videos}/>}/>
-        <Route/>
-        <Route/>
+        <Route path="/account" element={<Account/>}/>
+        <Route path="/friends" element={<Friends/>}/>
         <Route/>
       </Routes>
     </div>
