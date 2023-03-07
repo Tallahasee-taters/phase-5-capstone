@@ -8,6 +8,8 @@ const NavBar = ({ setUser }) => {
     const {user} = useContext(UserContext)
   const [open, setOpen] = useState(false);
 
+  
+
   function toggleDrawer() {
     setOpen(!open);
   }

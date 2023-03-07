@@ -1,12 +1,9 @@
 import React from 'react';
 
-const Post = ({title, thumbnail_url, video_url}) => {
-
+const Post = ({}) => {
     return (
         <div>
-            {title}
-            {thumbnail_url}
-            {video_url}
+            
         </div>
     );
 }

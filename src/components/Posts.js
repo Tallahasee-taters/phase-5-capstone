@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UpVote = () => {
+const Posts = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const UpVote = () => {
     );
 }
 
-export default UpVote;
+export default Posts;

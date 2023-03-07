@@ -6,7 +6,9 @@ import Login from "./components/Login";
 import NavBar from "./components/NavBar";
 import PostFeed from "./components/PostFeed";
 import Account from "./components/Account";
-import Friends from "./components/Friends";
+import Friends from "./components/FriendRequests";
+import Accounts from "./components/Accounts";
+
 
 function App() {
   const { user, setUser } = useContext(UserContext);
@@ -49,8 +51,8 @@ function App() {
       <Routes>
         <Route path="/home" element={<PostFeed videos={videos}/>}/>
         <Route path="/account" element={<Account/>}/>
-        <Route path="/friends" element={<Friends/>}/>
-        <Route/>
+        <Route path="/users" element={<Accounts/>}/>
+        {/* <Route path="/*" element={}/> */}
       </Routes>
     </div>
   );

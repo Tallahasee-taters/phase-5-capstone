@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CommentForm = () => {
+const UpdatePost = () => {
     return (
         <div>
             <form>
@@ -10,4 +10,4 @@ const CommentForm = () => {
     );
 }
 
-export default CommentForm;
+export default UpdatePost;
