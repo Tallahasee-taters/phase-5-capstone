@@ -12,6 +12,7 @@ const Accounts = () => {
     const mappedUsers = getUsers.map(user => <Account key={user.id} {...user}/>)
     return (
         <div>
+            <h1>Active Users</h1>
             {mappedUsers}
         </div>
     );

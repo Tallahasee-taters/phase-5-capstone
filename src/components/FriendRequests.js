@@ -1,10 +1,11 @@
 import React from 'react';
 
 const Friends = () => {
+
     return (
         <div>
-          <button></button>  
-          <button></button>  
+          <button>Accept</button>  
+          <button>Reject</button>  
         </div>
     );
 }

@@ -5,6 +5,7 @@ const PostFeed = ({ videos }) => {
   const mappedVideos = videos.map((video) => (
     <Post key={video.id} {...video} />
   ));
+  
   return (
     <div>
       <video controls width="100%">

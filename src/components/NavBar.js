@@ -8,7 +8,7 @@ const NavBar = ({ setUser }) => {
     const {user} = useContext(UserContext)
   const [open, setOpen] = useState(false);
 
-  
+
 
   function toggleDrawer() {
     setOpen(!open);
@@ -30,7 +30,7 @@ const NavBar = ({ setUser }) => {
       <Drawer anchor="top" open={open} onClose={toggleDrawer}>
         <Link to="/home">Community Feed</Link>
         <Link to="/friendreq">Friend Requests</Link>
-        <Link to="/account">Account</Link>
+        <Link to="/users">Active Accounts</Link>
         { user ? (
         <span className="logoutBtn">
           <button onClick={() => logout()} className="nav">
