@@ -5,9 +5,10 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import NavBar from "./components/NavBar";
 import PostFeed from "./components/PostFeed";
-import Account from "./components/Account";
+import Account from "./components/ActiveAccounts";
 import Friends from "./components/FriendRequests";
 import Accounts from "./components/Accounts";
+import AccountDetails from "./components/AccountDetails";
 
 
 function App() {
@@ -49,9 +50,11 @@ function App() {
     <div className="App">
         <NavBar setUser={setUser}/>
       <Routes>
-        <Route path="/home" element={<PostFeed videos={videos}/>}/>
+        <Route path="/home" element={<PostFeed videos={videos} setVideos={setVideos}/>}/>
         <Route path="/account" element={<Account/>}/>
         <Route path="/users" element={<Accounts/>}/>
+        <Route path="/friendreq" element={<Friends/>}/>
+        <Route path='/useraccount' element={<AccountDetails/>}/>
         {/* <Route path="/*" element={}/> */}
       </Routes>
     </div>

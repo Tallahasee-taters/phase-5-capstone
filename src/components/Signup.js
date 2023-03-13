@@ -23,7 +23,7 @@ const Signup = ({setShowLogin}) => {
     <div className="form" >
 
       <form onSubmit={(e) => handleSubmit(e, newUser, navigate)}>
-        <h1 className="signupHeader">Signup Today!</h1>
+        <h1 className="signupHeader">Sign up </h1>
         <label className="userSignup">Email</label>
         <input
           onChange={handleChange}
@@ -61,9 +61,9 @@ const Signup = ({setShowLogin}) => {
           type="password"
         /> */}
 
-        <input className="btn" type="submit" value='signup'/>
+        <input className="submitBtn" type="submit" value='signup'/>
         <br/>
-        <button onClick={() => setShowLogin(current => !current)}>login</button>
+        <button onClick={() => setShowLogin(current => !current)}>Already have an account? Login</button>
       </form>
     </div>
   );

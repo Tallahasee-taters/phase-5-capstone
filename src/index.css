@@ -1,13 +1,320 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.loginFormContainer {
+  color: white;
+  margin:auto;
+  padding: 5px;
+  height: 500px;
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* background-color: #302244; */
+  border-radius: 50rem;
+  /* background-color: #302244; */
+  border: 1px transparent;
+  background-image: linear-gradient(black,black), linear-gradient(90deg , #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-image-slice: 1;
+  margin-top: 100px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.form {
+  margin:auto;
+  padding: 5px;
+  height: 600px;
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* background-color: #302244; */
+  border-radius: 50rem;
+  /* background-color: #302244; */
+  border: 1px transparent;
+  background-image: linear-gradient(black,black), linear-gradient(90deg , #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-image-slice: 1;
+  
+}
+
+.signupHeader, .loginHeader {
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding-top: 25px;
+  border: px white;
+}
+
+html {
+  background-image: url("https://media.istockphoto.com/id/1334526454/vector/geometric-video-gaming-abstract-background.jpg?s=612x612&w=0&k=20&c=tTRQ0nZnvq0TkKlD6hMDqoK9JW4B5vzgUNH1af6HKnU=");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+ }
+
+ .submitBtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  opacity: 0.9;
+  border-radius: 50rem;
+ }
+
+ .userSignup {
+  color: white;
+  
+ }
+
+ .nav {
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  opacity: 0.9;
+  float:right;
+  border-radius: 25px;
+ }
+
+ input[type=submit]:hover {
+  opacity:1;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: black;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: white;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color:#000000
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 50rem;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+
+.loginLabel {
+  color: white;
+}
+
+.loginSbmt {
+  border-radius: 50rem;
+}
+
+.NavBar {
+  margin:auto;
+}
+
+.NavIcon {
+  color:white
+}
+
+.Links {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  text-decoration: none;
+  border: white;
+}
+
+.NavButtons {
+  float: left;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.NavButtons:hover:not(.active) {
+  background-color: #111;
+}
+
+.Accounts-Header {
+  text-align: center;
+  color:white;
+}
+
+.Account-Card {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+}
+
+.orientation {
+  display: flex;
+  flex-direction: row;
+  width: 450px;
+  margin:auto;
+}
+
+.Post-Card {
+  width:450px;
+  display:inline-block;
+}
+
+.username {
+  text-align: center;
+  color:black;
+  border:solid, black;
+}
+
+.FriendsList-Header {
+  text-align: center;
+  color:white;
+  border:solid, black;
+}
+
+.Req-Header {
+  text-align: center;
+  color:white;
+  border:solid, black;
+}
+
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+.postFeed {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.personal-card {
+  
 }

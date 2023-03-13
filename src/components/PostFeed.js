@@ -1,18 +1,23 @@
-import React from "react";
+import { useState } from "react";
 import Post from "./Post";
+import NewPostForm from "./NewPostForm";
 
-const PostFeed = ({ videos }) => {
+const PostFeed = ({ videos, setVideos }) => {
+  const [postForm, setPostForm] = useState(false);
+
   const mappedVideos = videos.map((video) => (
-    <Post key={video.id} {...video} />
+    <Post key={video.id} video={video} videos={videos} setVideos={setVideos}/>
   ));
-  
+
   return (
     <div>
-      <video controls width="100%">
-        <source src={"http://cdn.akamai.steamstatic.com/steam/apps/256930976/movie_max_vp9.webm?t=1676598403"} type="video/mp4" />
-        Sorry, your browser doesn't support embedded videos.
-      </video>
+      {postForm ? <NewPostForm videos={videos} setVideos={setVideos} /> : null}
+      <button className='button-64' onClick={() => setPostForm((current) => !current)}>
+        Add New Content
+      </button>
+      <div className='postFeed'>
       {mappedVideos}
+      </div>
     </div>
   );
 };
