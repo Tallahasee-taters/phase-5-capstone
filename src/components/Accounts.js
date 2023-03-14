@@ -14,10 +14,8 @@ const Accounts = () => {
   ));
   return (
     <div>
-      <h1 className='Accounts-Header'>Active Gamers</h1>
-      <div className='orientation'>
-      {mappedUsers}
-      </div>
+      <h1 className="Accounts-Header">Active Gamers</h1>
+      <div className="orientation">{mappedUsers}</div>
     </div>
   );
 };

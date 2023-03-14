@@ -49,7 +49,7 @@ const Friends = () => {
 
   return (
     <div>
-      <h2 className='Req-Header'>Pending Friend Requests</h2>
+      <h2 className="Req-Header">Pending Friend Requests</h2>
       {user.pending_friend_requests.map((req) => (
         <div key={req.id}>
           <NavLink>
@@ -60,7 +60,7 @@ const Friends = () => {
           <button onClick={() => handleReject(req.id)}>Reject</button>
         </div>
       ))}
-      <h2 className='FriendsList-Header'>Friends List</h2>
+      <h2 className="FriendsList-Header">Friends List</h2>
       {user.friends.map((friend) => (
         <div key={friend.id}>
           <NavLink>

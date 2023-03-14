@@ -1,9 +1,9 @@
-import {useContext, useState} from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../context/userContext";
 
-const UpdateUser = ({setShowEditForm}) => {
-    const {user, setUser} = useContext(UserContext)
-    const [avatarPreviewUrl, setAvatarPreviewUrl] = useState(null);
+const UpdateUser = ({ setShowEditForm }) => {
+  const { user, setUser } = useContext(UserContext);
+  const [avatarPreviewUrl, setAvatarPreviewUrl] = useState(null);
   const [updatedUser, setUpdatedUser] = useState({
     username: user?.username || "",
     email: user?.email || "",
@@ -17,15 +17,18 @@ const UpdateUser = ({setShowEditForm}) => {
     fetch(`api/v1/users/${user.id}`, {
       method: "PATCH",
       body: formData,
-    }).then(resp => {
-        if (resp.status === 202) {
-            resp.json().then(updatedUserObj => setUser(updatedUserObj))
-            .then(() => setShowEditForm(false))
-        } else {
-            resp.json().then(errorObj => alert(errorObj.errors))
-        }
     })
-    .catch((error) => console.log(error));
+      .then((resp) => {
+        if (resp.status === 202) {
+          resp
+            .json()
+            .then((updatedUserObj) => setUser(updatedUserObj))
+            .then(() => setShowEditForm(false));
+        } else {
+          resp.json().then((errorObj) => alert(errorObj.errors));
+        }
+      })
+      .catch((error) => console.log(error));
   };
 
   const handleChange = (e) => {

@@ -41,7 +41,7 @@ const Login = ({ setShowLogin, showLogin }) => {
           name="password"
         />
         <br />
-        <input type="submit" className='loginSbmt'/>
+        <input type="submit" className="loginSbmt" />
         <br />
         <button onClick={() => setShowLogin((current) => !current)}>
           Go Back

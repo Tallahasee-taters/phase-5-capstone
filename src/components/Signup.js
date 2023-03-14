@@ -3,25 +3,23 @@ import { UserContext } from "../context/userContext";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+const Signup = ({ setShowLogin }) => {
+  const [newUser, setNewUser] = useState({
+    username: "",
+    email: "",
+    password: "",
+    // passwordConfirmation: ''
+  });
 
-const Signup = ({setShowLogin}) => {
-    const [newUser, setNewUser] = useState({
-        username: '',
-        email: '',
-        password: '',
-        // passwordConfirmation: ''
-    });
+  const { handleSubmit } = useContext(UserContext);
+  const navigate = useNavigate();
 
-  const {handleSubmit} = useContext(UserContext) 
-  const navigate = useNavigate()
-  
   const handleChange = (e) => {
-    setNewUser({...newUser, [e.target.name]:e.target.value})
-}
+    setNewUser({ ...newUser, [e.target.name]: e.target.value });
+  };
 
   return (
-    <div className="form" >
-
+    <div className="form">
       <form onSubmit={(e) => handleSubmit(e, newUser, navigate)}>
         <h1 className="signupHeader">Sign up </h1>
         <label className="userSignup">Email</label>
@@ -32,7 +30,7 @@ const Signup = ({setShowLogin}) => {
           value={newUser.email}
           type="text"
         />
-        <br/>
+        <br />
 
         <label className="userSignup">Username</label>
         <input
@@ -42,7 +40,7 @@ const Signup = ({setShowLogin}) => {
           value={newUser.username}
           type="text"
         />
-        <br/>
+        <br />
         <label className="userSignup">Password</label>
         <input
           onChange={handleChange}
@@ -51,7 +49,7 @@ const Signup = ({setShowLogin}) => {
           value={newUser.password}
           type="password"
         />
-        <br/>
+        <br />
         {/* <label className="user-password-confirmation">Confirm Password</label>
         <input
           onChange={handleChange}
@@ -61,9 +59,11 @@ const Signup = ({setShowLogin}) => {
           type="password"
         /> */}
 
-        <input className="submitBtn" type="submit" value='signup'/>
-        <br/>
-        <button onClick={() => setShowLogin(current => !current)}>Already have an account? Login</button>
+        <input className="submitBtn" type="submit" value="signup" />
+        <br />
+        <button onClick={() => setShowLogin((current) => !current)}>
+          Already have an account? Login
+        </button>
       </form>
     </div>
   );

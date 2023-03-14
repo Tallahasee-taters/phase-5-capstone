@@ -24,7 +24,7 @@ const NavBar = ({ setUser }) => {
 
   return (
     <div className="NavBar">
-      <MenuIcon onClick={toggleDrawer} className='NavIcon'/>
+      <MenuIcon onClick={toggleDrawer} className="NavIcon" />
       <Drawer anchor="top" open={open} onClose={toggleDrawer}>
         <ul className="Links">
           <button className="NavButtons">
