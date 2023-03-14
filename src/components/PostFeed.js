@@ -2,7 +2,7 @@ import { useState } from "react";
 import Post from "./Post";
 import NewPostForm from "./NewPostForm";
 
-const PostFeed = ({ videos, setVideos }) => {
+const PostFeed = ({ videos, setVideos, createPost }) => {
   const [postForm, setPostForm] = useState(false);
 
   const mappedVideos = videos.map((video) => (
@@ -11,7 +11,7 @@ const PostFeed = ({ videos, setVideos }) => {
 
   return (
     <div>
-      {postForm ? <NewPostForm videos={videos} setVideos={setVideos} /> : null}
+      {postForm ? <NewPostForm videos={videos} setVideos={setVideos} createPost={createPost} setPostForm={setPostForm}/> : null}
       <button className='button-64' onClick={() => setPostForm((current) => !current)}>
         Add New Content
       </button>

@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import UpdatePost from "./UpdatePost";
 import Card from "@mui/material/Card";
+import { UserContext } from "../context/userContext";
 
 const Post = ({video, videos, setVideos}) => {
     const [editPostForm, setEditPostForm] = useState(false)
     const [userPost, setUserPost] = useState([])
+    const {user} = useContext(UserContext)
 
     const handleDelete = () => {
         fetch(`/api/v1/videos/${video.id}`, {
@@ -22,24 +24,24 @@ const Post = ({video, videos, setVideos}) => {
     <div>
         <Card className='Post-Card'>
         <h3>{video.title}</h3>
-        <video controls width="100%">
-        <source src={video.video_url} type="video/mp4" />
-      </video> 
+        <iframe width="100%" src={video.video_url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       <label className="Post-form">👍</label>
       <button />
       <label className="Post-form">👎</label>
       <button />
-      <button  onClick={() => setEditPostForm((current) => !current)}>
+      { user.id === video.user.id ? <button onClick={() => setEditPostForm((current) => !current)}> 
         Edit Post
+        </button> : null }
       {editPostForm ? (
         <UpdatePost
           setEditPostForm={setEditPostForm}
           video={video}
           setUserPost={setUserPost}
+          setVideos={setVideos}
         />
       ) : null}
-      </button>
-      <button onClick={() => handleDelete()}>Remove Post</button>
+      { user.id === video.user.id ? <button onClick={() => handleDelete()}>Remove Post</button> : null }
+      <h3>posted by {video?.user?.username}</h3>
       </Card>
     </div>
   );

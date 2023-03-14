@@ -224,9 +224,16 @@ html {
 }
 
 .Account-Card {
-  display: flex;
-  flex-direction: row;
-  width: 250px;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  text-decoration: none;
+  border: white;
 }
 
 .orientation {

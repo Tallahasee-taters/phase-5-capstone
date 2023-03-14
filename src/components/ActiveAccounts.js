@@ -40,14 +40,14 @@ const Account = ({ id, username, avatar, friends }) => {
   };
 
   return (
-    <div>
+    <div className='Account-Card'>
       {/* <h2 className='user-cards'>{username}</h2>
       {user.id !== id ? (
         <button onClick={checkFriendship() ? removeFriend : addFriend}>
           {checkFriendship() ? "Remove Friend" : "Add Friend"}
         </button>
       ) : null} */}
-      <li className='Account-Card'>
+      <li >
         <Card sx={{ maxWidth: 250 }} >
           <CardMedia image={avatar}  className='card-avatar' />
           <CardContent>
